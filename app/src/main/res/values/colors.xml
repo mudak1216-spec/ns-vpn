@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Cyber Neon Dark Surfaces -->
+    <color name="cyber_bg">#FF070A12</color>
+    <color name="cyber_surface">#FF0D1220</color>
+    <color name="cyber_surface_container">#FF131A2E</color>
+    <color name="cyber_surface_container_high">#FF1A233D</color>
+    <color name="cyber_outline">#FF243256</color>
+    <color name="cyber_outline_neon">#5500F0FF</color>
+
+    <!-- Neon Accents -->
+    <color name="neon_cyan">#FF00F0FF</color>
+    <color name="neon_cyan_dim">#2200F0FF</color>
+    <color name="neon_cyan_glow">#4400F0FF</color>
+    <color name="neon_violet">#FF8B5CF6</color>
+    <color name="neon_violet_dim">#228B5CF6</color>
+    <color name="neon_emerald">#FF00FFA3</color>
+    <color name="neon_emerald_dim">#2200FFA3</color>
+    <color name="neon_pink">#FFFF2A85</color>
+
+    <!-- Text Colors -->
+    <color name="cyber_text_primary">#FFF1F5F9</color>
+    <color name="cyber_text_secondary">#FF94A3B8</color>
+    <color name="cyber_text_muted">#FF64748B</color>
+</resources>

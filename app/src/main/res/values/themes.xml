@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SSHProtocol" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@color/cyber_bg</item>
+        <item name="android:statusBarColor">@color/cyber_bg</item>
+        <item name="android:navigationBarColor">@color/cyber_surface</item>
+
+        <item name="colorPrimary">@color/neon_cyan</item>
+        <item name="colorOnPrimary">@color/cyber_bg</item>
+        <item name="colorPrimaryContainer">@color/neon_cyan_dim</item>
+        <item name="colorOnPrimaryContainer">@color/neon_cyan</item>
+
+        <item name="colorSecondary">@color/neon_violet</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/neon_violet_dim</item>
+        <item name="colorOnSecondaryContainer">@color/neon_cyan</item>
+
+        <item name="colorTertiary">@color/neon_emerald</item>
+        <item name="colorOnTertiary">@color/cyber_bg</item>
+
+        <item name="colorSurface">@color/cyber_bg</item>
+        <item name="colorOnSurface">@color/cyber_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/cyber_text_secondary</item>
+
+        <item name="colorSurfaceContainerLow">@color/cyber_surface</item>
+        <item name="colorSurfaceContainer">@color/cyber_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/cyber_surface_container_high</item>
+
+        <item name="colorOutline">@color/cyber_outline</item>
+        <item name="colorOutlineVariant">@color/cyber_outline</item>
+        <item name="android:colorAccent">@color/neon_cyan</item>
+    </style>
+</resources>
