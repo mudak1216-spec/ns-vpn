@@ -19,17 +19,25 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Clean Gradle Caches
-        run: rm -rf ~/.gradle/caches ~/.gradle/daemon
+      - name: Remove Termux AAPT2 override (if present)
+        run: |
+          # gradle.properties di repo masih berisi:
+          # android.aapt2FromMavenOverride=/data/data/com.termux/files/usr/bin/aapt2
+          # Path itu hanya ada di HP (Termux), tidak ada di runner GitHub,
+          # sehingga semua compile resource gagal (12 failures, penyebab sama).
+          # Hapus barisnya supaya Gradle mengunduh aapt2 dari Maven.
+          sed -i '/aapt2FromMavenOverride/d' gradle.properties || true
+          echo "--- sisa baris aapt2/termux (harusnya kosong) ---"
+          grep -rn "aapt2FromMavenOverride\|com.termux" gradle.properties local.properties app/build.gradle app/build.gradle.kts 2>/dev/null || echo "bersih"
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Build Debug APK with Gradle
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-            name: Ns-Vpn-Debug-APK
-            path: app/build/outputs/apk/debug/app-debug.apk
+          name: Ns-Vpn-Debug-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
